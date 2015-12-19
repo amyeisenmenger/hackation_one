@@ -1,2 +1,28 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+<head>
+  <script> $(document).ready(function() {
+    $('#calendar').fullCalendar({
+      schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
+      header: {
+        center: 'month, agendaWeek, agendaDay' // buttons for switching between views
+      },
+      views: {
+        day: {
+          defaultView: 'agendaDay',
+        },
+        week: {
+          defaultView: 'agendaWeek'
+        }
+
+      },
+      events:[],
+      resources: [
+        { id: '1', title: 'room 1' },
+        { id: '2', title: 'room 2' }, 
+        { id: '3', title: 'room 3' }
+        ]         
+    })
+});</script>
+</head>
+
+<div id="calendar">
+</div>
